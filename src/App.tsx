@@ -22,7 +22,6 @@ import {
   moneyCalc,
   currencyUnitChanged,
 } from "./redux/moneySlice";
-import { nanoid } from "nanoid";
 
 function App() {
   const allocatedBudget = useSelector(
@@ -288,7 +287,7 @@ function App() {
               if (amountForDepartmentField && departmentField) {
                 dispatch(
                   allocate({
-                    id: nanoid(),
+                    id: departmentField, //nanoid(),
                     department: departmentField,
                     amountForDepartment: Number(amountForDepartmentField),
                   })
