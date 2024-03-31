@@ -26,9 +26,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
       - run: node -v
+      - run: npm install
       - run: npm list react
       - run: npm list react-redux
-      - run: npm install
       - run: npm ci
       - run: npm run build --if-present
       - run: npm test
