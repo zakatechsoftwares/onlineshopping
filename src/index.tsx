@@ -9,16 +9,19 @@ import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Homepage />,
-  },
-  {
-    path: "/cart",
-    element: <App />,
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Homepage />,
+    },
+    {
+      path: "/cart",
+      element: <App />,
+    },
+  ],
+  { basename: "/shoppingApp" }
+);
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
